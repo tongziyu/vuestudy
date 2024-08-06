@@ -1,26 +1,43 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="app">
+    <p>我是App.vue12</p>
+    <!-- 头部组件 -->
+    <HmHeader></HmHeader>
+    <!-- 主体组件-->
+    <HmMain></HmMain>
+    <!-- 底部组件  -->
+    <HmFoot></HmFoot>
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+// 导入头部
+import HmHeader from "./components/HmHeader.vue"
+
+// 导入主体
+import HmMain from "./components/HmMain.vue"
+
+// 导入底部
+import HmFoot from "./components/HmFoot.vue"
 
 export default {
-  name: 'App',
   components: {
-    HelloWorld
+    // 自定组件名:组件对象
+    "HmHeader": HmHeader,
+    "HmMain": HmMain,
+    "HmFoot": HmFoot
   }
 }
+
 </script>
 
+
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+.app{
+  width: 600px;
+  height: 700px;
+  background-color: bisque;
+  margin: 0 auto;
+  padding: 20px;
 }
 </style>

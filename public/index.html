@@ -2,16 +2,29 @@
 <html lang="">
   <head>
     <meta charset="utf-8">
+    <!-- 让IE浏览器启用最高渲染标准  -->
+    <!-- IE8是不支持Vue的 -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--   开启移动端虚拟窗口，（理想视口）   -->
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <!-- 设置页签图标 -->
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
     <title><%= htmlWebpackPlugin.options.title %></title>
   </head>
   <body>
+    <!--  当浏览器不支持JS的时候，显示这个 -->
     <noscript>
-      <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+      <strong>We're sorry but <%= htmlWebpackPlugin.options.title %>
+          doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
     </noscript>
     <div id="app"></div>
     <!-- built files will be auto injected -->
   </body>
+
+<!--
+    在index.html 文件中，并没有引入main.js 这个js文件
+    因为：Vue会自动引入main.js文件，所以 main.js文件不要随便改名字，位置也不要随便动
+    在main.js中 使用import 引入了vue.js 文件，所以index.html中也间接引入了vue.js
+-->
+
 </html>
